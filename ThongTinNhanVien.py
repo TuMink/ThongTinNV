@@ -17,7 +17,7 @@ def luu_tt():
         "Nơi cấp": noi_cap.get()
     }
     with open("NHANVIEN.csv", "a", newline="", encoding="utf-8") as file:
-        writer = csv.DictWriter(f, fieldnames=thong_tin.keys())
+        writer = csv.DictWriter(file, fieldnames=thong_tin.keys())
         if file.tell() == 0:  # Nếu file rỗng, ghi header
             writer.writeheader()
         writer.writerow(tt)
